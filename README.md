@@ -3,6 +3,10 @@ This is a project to extract all the Test Certificates from [IECEE Website](http
 
 > Disclaimer: This project is intended for educational and research purposes only. Unauthorized use of the IECEE data or API may violate their terms of service. Please ensure that your usage complies with the IECEE’s policies and guidelines. This API is functional as at the date of last commit. Changes to the structure of data or the IECEE portal may affect the functionality of this API.
 
+# Install Requirements
+Obviously a virtual environment is recommended. 
+Run `pip install -r requirements.txt` 
+
 # IECEE Certificates Portal
 The IECEE Certificates Portal is a web-based tool that allows users to search for and retrieve Test Certificates for various electrical and electronic products. These certificates are part of the CB Scheme, which streamlines the certification process across multiple countries.
 
@@ -23,7 +27,7 @@ url = "https://ocs-iecee-api.iecee.org/api/search-es"
 ```
 
 ### Payload
-```json 
+```python 
 payload = {
     "from": 1,
     "size": 15,
@@ -43,7 +47,27 @@ While the headers may not be necessary for this API, they are included in the sc
 Once the JSON data is retrieved from the API, it is converted into structured data formats such as CSV. This step involves parsing the JSON response and extracting relevant fields to be stored in a tabular format. Some of the unnecessary data is removed.
 
 For this project, the following fields were retained:
-- 
+- id
+- is_private
+- ref_number
+- subject
+- scopes_joined
+- expiration_date
+- cert_type
+- issue_date
+- trademark
+- id2
+- org_name
+- last_update_date
+- country_code
+- country
+- org_id
+- org_type
+- manufacturer_name
+- release_date
+- phrase_suggest
+- scope_categories
+- status
 
 ## Data to MySQL Database
 After converting the JSON data into a structured format, the next step is to insert this data into a MySQL database. Check for a future update on this.
