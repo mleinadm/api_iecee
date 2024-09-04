@@ -1,0 +1,14 @@
+# py cache
+__pycache__/
+
+# env
+env/
+
+# data files
+*.csv
+*.xlsx
+*.xls 
+*.json
+
+# py files
+test.py
