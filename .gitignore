@@ -12,3 +12,6 @@ env/
 
 # py files
 test.py
+
+# others
+.DS_Store
