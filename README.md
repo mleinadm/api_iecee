@@ -1,7 +1,7 @@
 # Introduction
 This is a project to extract all the Test Certificates from [IECEE Website](https://certificates.iecee.org/#/search). IECEE (IEC System of Conformity Assessment Schemes for Electrotechnical Equipment and Components) is a body of the International Electrotechnical Commission (IEC) that adminsters the IEC CB Scheme. This scheme is a CB Scheme is multilateral agreement to allow international certification of electrical and electronic products so that a single certification allows worldwide market access
 
-> Disclaimer: This project is intended for educational and research purposes only. Unauthorized use of the IECEE data or API may violate their terms of service. Please ensure that your usage complies with the IECEE’s policies and guidelines. This API is functional as at the date of last commit. Changes to the structure of data or the IECEE portal may affect the functionality of this API.
+> $${\color{red}Disclaimer: This project is intended for educational and research purposes only. Unauthorized use of the IECEE data or API may violate their terms of service. Please ensure that your usage complies with the IECEE’s policies and guidelines. This API is functional as at the date of last commit. Changes to the structure of data or the IECEE portal may affect the functionality of this API.}$$
 
 # Install Requirements
 Obviously a virtual environment is recommended. 
