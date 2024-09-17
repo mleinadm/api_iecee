@@ -30,8 +30,8 @@ url = "https://ocs-iecee-api.iecee.org/api/search-es"
 ```python 
 payload = {
     "from": 1,
-    "size": 15,
-    "query": "",
+    "size": 9999, # this is the maximum number
+    "query": "", # example: "philips"
     "sortBy": [{"ref_number": "asc"}],
     "dateRanges": {},
     "conjunctiveFacetGroups": [],

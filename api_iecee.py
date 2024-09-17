@@ -1,5 +1,4 @@
-import requests
-import json
+import requests, json, random
 from settings import JSONFILE
 from jsontocsv import json_to_csv
 # API endpoint
@@ -27,13 +26,13 @@ headers = {
 # Payload
 payload = {
     'from': 1,
-    'size': 15,
-    'query': '',
+    'size': 9999, # 9999 is the maximum size.
+    'query': '', # query, e.g., 'philips'
     'sortBy': [{'ref_number': 'asc'}],
     'dateRanges': {},
     'conjunctiveFacetGroups': [],
     'terms': {},
-    'mode': 'PARTIAL'
+    'mode': 'PARTIAL' # another option: FULL, 
 }
 
 # POST request
@@ -42,6 +41,7 @@ response = requests.post(url, json=payload, headers=headers)
 # Status code and process the response
 if response.status_code == 200:
     data = response.json()
+    
     # Write JSON data to a file
     with open(f'{JSONFILE}', 'w') as file:
         json.dump(data, file, indent=4)
@@ -51,4 +51,7 @@ else:
 
 
 # convert json to csv
-json_to_csv(JSONFILE)
+try:
+    json_to_csv(JSONFILE)
+except Exception as e:
+    print(f'Log--->Error converting JSON to CSV: {e}')
